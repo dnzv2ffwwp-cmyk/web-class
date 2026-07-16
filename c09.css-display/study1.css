@@ -1,0 +1,21 @@
+h1{
+    color: aqua;
+    background-color: black;
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+}
+strong{
+    background-color: blue;
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+
+}
+p{
+    background-color: aqua;
+}
+button{
+    width: 300px;
+    height: 200px;
+}

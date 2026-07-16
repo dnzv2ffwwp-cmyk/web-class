@@ -1,0 +1,289 @@
+*{margin: 0; padding: 0;}
+.box1{
+    width: 800px;
+    background-color: beige;
+    margin: 200px auto;
+    height: 100px;
+    flex-direction: row;
+    display: flex;
+}
+/* .a{background-color: red; width: 100px;}
+.b{background-color: orange; width: 100px;}
+.c{background-color: yellow; width: 100px;}
+.d{background-color: green; width: 100px;}
+.e{background-color: blue; width: 100px;} */
+
+
+.box2{
+    width: 800px;
+    background-color: beige;
+    margin: 200px auto;
+    height: 100px;
+    flex-direction: row;
+    display: flex;
+}
+.a2{background-color: red; width: 100px;}
+.b2{background-color: orange; width: 100px;}
+.c2{background-color: yellow; width: 100px;}
+.d2{background-color: green; width: 100px;}
+.e2{background-color: blue; width: 100px;}
+
+.box .a2{order: 1;}
+.box .b2{order: 2;}
+.box .c2{order: 4;}
+.box .d2{order: 5;}
+.box .e2{order: 3;}
+
+
+.box3{
+    width: 800px;
+    background-color: beige;
+    margin: 200px auto;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-end; */
+    justify-content: flex-end;
+}
+.a3{background-color: red; width: 100px;}
+.b3{background-color: orange; width: 100px;}
+.c3{background-color: yellow; width: 100px;}
+.d3{background-color: green; width: 100px;}
+.e3{background-color: blue; width: 100px;}
+
+.box4{
+    width: 800px;
+    background-color: beige;
+    margin: 200px auto;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.a4{background-color: red; width: 100px;  height: 100px;}
+.b4{background-color: orange; width: 100px; height: 100px;}
+.c4{background-color: yellow; width: 100px; height: 100px;}
+.d4{background-color: green; width: 100px; height: 100px;}
+.e4{background-color: blue; width: 100px; height: 100px;}
+
+.box5{
+    width: 800px;
+    background-color: beige;
+    margin: 200px auto;
+    height: 300px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.a5{background-color: red; width: 100px;  height: 100px;  }
+.b5{background-color: orange; width: 100px; height: 100px; }
+.c5{background-color: yellow; width: 100px; height: 100px; }
+.d5{background-color: green; width: 100px; height: 100px; }
+.e5{background-color: blue; width: 100px; height: 100px; }
+
+.box6{
+    width: 800px;
+    background-color: beige;
+    margin: 200px auto;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.a6{background-color: red; width:  400px ;height: 100px;  }
+.b6{background-color: orange; width: 400px ; height: 100px; }
+.c6{background-color: yellow; width: 400px ; height: 100px; }
+.d6{background-color: green; width: 400px ; height: 100px; }
+.e6{background-color: blue; width:  400px ;height: 100px; }
+
+.box7{
+    width: 800px;
+    background-color: beige;
+    margin: 200px auto;
+    height: 300px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.box .left{
+    display: flex;
+    flex-direction: column;
+
+    }
+.box .right{
+    display: flex;
+    justify-content: row;
+    flex-direction: column-reverse; 
+}
+
+
+.a7{background-color: red; width:  100px ;height: 100px;  }
+.b7{background-color: orange; width: 100px ; height: 100px; }
+.c7{background-color: yellow; width: 100px ; height: 100px; }
+.d7{background-color: green; width: 100px ; height: 100px; }
+.e7{background-color: blue; width:  100px ;height: 100px; }
+
+
+.box8{
+    width: 800px;
+    background-color: beige;
+    margin: 200px auto;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.box8 .left {
+    display: flex;
+    /* flex-direction: row-reverse; */
+} 
+
+.box8 .right {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+.a8{background-color: red; width:  100px ;height: 100px; }
+.b8{background-color: orange; width: 100px ; height: 100px; }
+.c8{background-color: yellow; width: 100px ; height: 100px; }
+.d8{background-color: green; width: 100px ; height: 100px; }
+.e8{background-color: blue; width:  100px ;height: 100px; }
+
+/* .box8>div{
+    display: flex;
+}
+.box8> div div{
+    width: 100px;
+    width: 100px;
+} */
+ /* 더 간단한 코드~ */
+
+
+ .box9{
+     width: 800px;
+     height: 300px;
+     background-color: beige;
+     margin: 200px auto;
+     display: flex;
+ }
+ .box9 .left{
+    /* width: 500px; */
+    flex-basis: 500px;
+    display: flex;
+}
+.left>div{flex:1;}
+.right>div{height: 100px;}
+.box9 .right{
+    /* width: 300px; */
+    flex-basis: 300px;
+}
+
+.a9{background-color: red;}
+.b9{background-color: orange;}
+.c9{background-color: yellow;}
+.d9{background-color: green;}
+.e9{background-color: blue;}
+
+.a{background-color: red;}
+.b{background-color: orange;}
+.c{background-color: yellow;}
+.d{background-color: green;}
+.e{background-color: blue;}
+
+.box10{
+    width: 800px;
+    background-color: beige;
+    margin: 200px auto;
+    height: 300px;
+    display: flex;
+}
+.left{
+    display: flex;
+    height: 300px;
+    /* justify-content: space-between; */
+    flex-basis: 250px;
+    height: 300px;
+}
+.right{
+    display: flex;
+    /* justify-content: space-between; */
+    flex-basis: 250px;
+    height: 300px;
+}
+.center{
+    display: flex;
+    flex-basis: 300px;
+    height: 300px;
+    flex-direction: column;
+}
+.bottom{    
+    display: flex;
+    flex-basis: 100px;
+    height: 200px;
+}
+
+.e,
+.d,
+.b {flex: 1;}
+
+.box-10{
+    width: 800px;
+    background-color: beige;
+    margin: 200px auto;
+    height: 300px;
+    display: flex;
+}
+
+.box-10 .a{
+    width: 250px;
+}
+.box-10 .b{
+    width: 250px;
+}
+.box-10 .c{
+    height: 100px;
+}
+.box-10 .boxcenter
+{
+width: 300px;}
+
+.box-10 .boxinner{
+    display: flex;
+    height: 200px;
+}
+.boxinner div{
+    flex: 1;
+    height: 200px;
+}
+
+.box11{
+    width: 800px;
+    height: 300px;
+    background-color: beige;
+    margin: 200px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box11>div{width: 200px;}
+.box11-1 div{height: 100px;}
+.box11-1{
+    /* justify-content: center; */
+    flex-direction: column;
+    height: 100px;
+}
+.box11-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.box11-2{display: flex;}
+.box11-2 div{width: 100px;height: 100px;}
+.box11 .e {align-self: stretch;}

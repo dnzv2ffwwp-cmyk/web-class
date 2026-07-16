@@ -1,0 +1,91 @@
+/* 기본 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* 기초 끝 */
+
+
+.about{
+    width: auto;
+    /* height: 1577px; */
+    /* border: 2px solid gray; */
+}
+.banner{
+    background: url(./img/cafe222.png) no-repeat 50% 50% / cover;
+    /* border: 2px solid salmon; */
+    width: auto;
+    height: 599px;
+    margin-bottom: 6rem;
+}
+.banner h1{
+    font-family: 'Aboreto';
+    color: white;
+    font-size: 2.5rem;
+    position: relative;
+    line-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: (-50%, -50%);
+}
+.inner{
+    padding: 0 160px;
+    margin: 0 auto;
+    /* margin-top: 30px; */
+    width: 1600px;
+    /* border: 2px solid red; */
+}
+.inner h2{
+    font-family: 'Aboreto';
+    font-weight: 400;
+    font-size: 80px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    line-height: 90%;
+    
+}
+.inner p{
+    /* overflow-wrap: break-word; */
+    font-family: 'Pretendard';
+    padding: 1rem 0;
+    border-top: 1px solid  #000;
+    font-weight: 400;
+    text-align: right;
+
+}
+.bottom{
+    /* border: 2px solid pink; */
+    margin-top: 30px;
+}
+.bottom img{
+    object-fit:cover ;
+    width: 1000px;
+    height: 430px;
+}
+.bottom figcaption{
+    font-family: 'Pretendard';
+    font-weight: 400;
+    text-align: left ;
+}

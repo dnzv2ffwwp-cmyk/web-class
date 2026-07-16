@@ -1,0 +1,32 @@
+.box{
+    text-align: center;
+
+}
+.box p{padding: 300px 30%;}
+
+.box h2{
+    font-size: 10vw;
+    position: sticky;
+    /* 부모태그가 화면에 보이는 동안만 스티커처럼 붙어있어서 sticky*/
+    border: 1px solid pink;
+    left: 0;
+    top: 100px;
+}
+.imgbox{
+    background-color: beige;
+    padding:16px 20px;  
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    
+}
+.imgbox p{padding: 300px 30%;}
+.sticky-img{
+    width: 400px;
+    position: sticky;
+    left: 0;
+    top: 0;
+}
+.sticky-img img{
+    width: 100%;
+}

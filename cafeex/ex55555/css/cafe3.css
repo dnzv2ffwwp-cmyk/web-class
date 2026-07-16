@@ -1,0 +1,118 @@
+html{
+    font-family: 'Aboreto', 'pretendard' ;
+    font-size: 20px;
+}
+main{
+    background: url(../img/BACKGROUND.png) no-repeat 50% 750px;
+}
+
+.point-type{font-family: 'Aboreto','pretendard';}
+
+
+.banner{
+    background: url(../img/cafe4.png) no-repeat 50% 50% / cover;
+    /* border: 3px solid red; */
+    border-radius:0 0 150px 150px;
+    /* 왼위 오위  아우 아왼 ->시계 방향~! */
+    height: 599px;
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h1{
+    color: white;
+    font-size: 2.5rem;
+    line-height: 100%;
+    text-transform: uppercase;
+    /* position: relative;
+    top: 50%;
+    left: 50%; */
+}
+
+.container{
+    border: 3px solid orange;
+    margin: auto;
+    width: 1600px;
+    height: 100%;
+}
+/* .container p{
+    text-align: center;
+} */
+.con1{
+    border: 3px solid yellow;
+    padding-top: 10rem;
+    background: url(../img/Vector\ 1.png) no-repeat 50% 0 ;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.con2{
+    /* border: 3px solid green; */
+    /* display: flex; */
+}
+.cafe-figure{
+    display: flex;
+    /* border: 3px solid blue; */
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+.cafe-figure figure{
+    line-height: 0;
+    flex: 1;
+}
+.cafe-figure figure img{
+    /* border: 3px solid navy; */
+    aspect-ratio: 790/434;    
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+.con2 p{
+    line-height: 140%;
+}
+.con2 h3+p{
+    margin-bottom: .5rem;
+    /* h3바로 다음에 오는 p태그에 대해 h3+p를 쓴다 */
+}
+
+.con2 h3{
+    font-size: 2rem;
+    line-height: 140%;
+    margin-bottom: 1rem;
+}
+
+
+.container h2{
+    font-size: 7.5rem;
+    line-height: 90%;    
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.red{
+    color: #770000;
+}
+/* .con1 p span{
+    color: #770000;
+} */
+
+/* flex를 하려면 부모태그가 있어야한다! */
+
+
+
+
+
+/* .figure .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    gap: 10px;
+}
+.figure p{
+    text-align: left;
+}
+.figure h3{
+    text-align: left;
+} */

@@ -1,0 +1,54 @@
+html{
+    /* font-size: 20px; */
+    font-size: 16px;
+    font-family: "페이퍼 로지",'Aggravo',"Inter",sans-serif;
+    font-weight: 400;
+}
+
+.a{
+    font-size: 20px;
+}
+.b{
+    font-size: 16px;
+}
+.b p{
+    font-size: 2em;
+    font-weight: 100;
+    line-height: 160%;
+    font-style: italic;
+}
+address{
+    font-style: normal;
+}
+.c{
+    letter-spacing: -1px;
+    word-spacing: 20px;
+}
+.d{
+    white-space: pre-wrap;
+}
+.e{
+    text-indent: 50px;
+    text-transform: capitalize;
+    word-break: keep-all;
+
+}
+.g{
+    text-align: justify;
+    text-decoration: line-through;
+}
+.h{
+     font-family: "온글잎 박다현";
+}
+.j{
+     font-family: "페이퍼 로지";
+     font-weight: 900;
+}
+
+.f{
+    font-family: 'Aggravo';
+}
+.i{
+     font-family: "Inter", sans-serif;
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>양식</title>
+</head>
+<body>
+    <form action="#">
+        <div>
+            <label for="user-id">ID</label>
+            <input type="text" id="user-id" placeholder="아이디를 입력하시오">
+        </div>
+        <div>
+            <label for="user-pw">PW</label>
+            <input type="password" id="user-pw" placeholder="비밀번호를 입력하시오">
+        </div>
+        <input type="submit" value="로그인">
+    </form>
+
+    <hr>
+
+    <form action="#">
+        <fieldset>
+            <legend>계정 정보</legend>
+            <div>
+                <label for="">아이디</label>
+                <input type="text" id="user-id" placeholder="아이디를 입력해주세요" value="abcd"readonly>
+            </div>
+            <div>
+                <label for="">비밀번호</label>
+                <input type="password" id="usesrPw">
+            </div>
+            <p>비밀번호는 영대문자와 영소문자 그리고 특수문자를 포함시켜 주세요</p>
+        </fieldset>
+        <fieldset>
+            <legend>개인 정보</legend>
+            <div>
+                <label for="username">이름</label>
+                <input type="text" id="username" name="userName">
+            </div>
+            <div>
+                <label for="userGender">성별</label>
+                <input type="radio" id="man" name="userGender">
+                <label for="man">남자</label>
+                <input type="radio" id="woman" name="userGender">
+                <label for="woman">여자</label>
+                <input type="radio" id="none" name="userGender">
+                <label for="none">선택 안 함</label>
+            </div>
+            <div>
+                <label for="userbirth">생년월일</label>
+                <input type="date" id="userbirth">
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+</html>

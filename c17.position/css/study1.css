@@ -1,0 +1,45 @@
+*{margin: 0; padding: 0;}
+
+.box{
+    border: 10px solid grey;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    /* position: static; */
+    /* 이 위가 position의 기본 값 */
+    /* 이거는 좌우상하로 움직일 수 있는 속성 */
+    bottom: 0px;
+    right: 0px;
+    
+}
+.box .a{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    /* 이 클래스만 공중에 띄워낸다->공중에 띄워졌기 때문에 그 아래있는 박스인 blue박스가 그 밑에 간다 */
+    right: 0;
+    bottom: 0;
+    /* z-index: 0; */
+    /* 이 태그의 기본값이 0 
+    값이 크면 앞쪽에 배치됨 */
+    z-index: 10;
+}
+.box .b{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    z-index: 0;
+}
+.box .c{
+    background-color: green;
+    /* position: absolute; */
+    /* 원래 부모컨텐츠만큼 너비가 설정되는데 이 태그를 사용하면 그 컨테츠의 너비가 갖고있는 것 만큼 조정된다 */
+    position: fixed;
+    /* position: fixed는 무조건 화면기준 배치 */
+    right: 0;
+    top: 0;
+}

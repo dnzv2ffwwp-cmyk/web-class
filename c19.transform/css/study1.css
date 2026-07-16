@@ -1,0 +1,41 @@
+.box{
+    border: 4px solid orange;
+    width: 300px;
+    height: 300px;
+    margin: 200px auto;
+    transition: all 1s ease 0s;
+}
+.a{background-color: palevioletred;}
+.a:hover{transform: translate3d(200px, 100px, 100px);
+    /* trasnform은 가지고 있는 너비만큼이동이 된다. */
+    /* transform: translateX(); */
+    /* transform: translateY(); */
+    /* transform: translateZ(); */
+    /* x축 가로 y축 세로 z축은 대각선 */
+}
+
+.box-wrap{
+    perspective: 50px;
+    /* perspective-origin:  50% 50%; */
+    border: 3px solid blue;
+}
+.b{
+    background-color: lime;
+}
+.b:hover{
+    transform: perspective(1000px);
+    transform: rotateZ(360deg) ;
+}
+.c{
+    background-color: brown;
+    transform-origin: 0% 100%;
+}
+.c:hover{
+    transform: scaleY(2);
+}
+.d{
+    background-color: purple;
+}
+.d:hover{
+    transform: skewY(-30deg);
+}

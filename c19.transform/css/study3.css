@@ -1,0 +1,17 @@
+.box{
+    background-color: palevioletred;
+    height: 800px;
+    position: relative;
+}
+.a{
+    width: 300px;
+    height: 200px;
+    background-color: red;
+    position:absolute;
+    /* left: calc(50% - 100px);
+    top: calc(50% - 100px); */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    /* 너비 높이에 상관없이 중앙이 된다 너비 높이가 주어지지 않을 때 사용하는 속성 */
+}

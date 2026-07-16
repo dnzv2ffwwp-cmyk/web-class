@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 태그</title>
+</head>
+<body>
+    <h1>이미지 태그</h1>
+    <img style="height: 100px;" src="./image/brunch.png" alt="자동차">
+    <p>이미지는 태그는 문맥적인(예:h1는 제목컨텐츠) 뜻은 없다. 이미지는 글자처럼 취급되는 것</p>
+    <h2><img style="height:50px;" src="./image/brunch.png" alt="ck"></h2>
+    <p style="font-size :50px">
+        이 <img style="height:100px" src="./image/brunch.png" alt="자동차사진"> 자동차는 오래되었다.
+    </p>
+    <h2>반응형 이미지 설정</h2>
+    <p>기기 화면 크기에 따라 크기가 바뀌는</p>
+   <picture>
+
+    <source media="(max-width:768px)" srcset="./image/bed-640.jpg">
+    <source media="(max-width:1200px)" srcset="./image/bed-1024.jpg">
+    <source media="(min-width:1201px)" srcset="./image/bed-2400.jpg">
+    <img src="./image/bed-640.jpg" alt="침대 사진 넘 자고 싶다">
+   </picture>
+
+
+</body>
+</html>

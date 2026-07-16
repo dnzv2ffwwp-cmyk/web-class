@@ -1,0 +1,42 @@
+.a{
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: 
+    width .1s ease 0s,
+    padding 1s ease 1s;
+    overflow: hidden;
+}
+
+.a:hover{
+    background-color: green;
+    width: 1000px;
+    color: white;
+    /* 마우스를 갖다대면 설정해둔 대로 바뀜 */
+    padding: 30px;
+}
+.a:active{
+    border: 4px solid green;
+/* 클릭해서 누를 때가 액티브 */
+}
+.b:before{
+    /* 앞에 선택한 태그의 자식태그를 만든다는 뜻 */
+    content: '하이하이';
+    border: 3px solid orange;
+    /* width: 100px; 
+    이 태그의 기본 텍스트 속성은 인라인태그 그래서 너비설정불가*/
+    display: block;
+    /* 이렇게 하면 너비높이설정이 된다 */
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.b:after{
+    content: '헤헤';
+    /* 이번에는 그 뒤에 만든다는 뜻 */
+    border: 3px solid navy;
+}

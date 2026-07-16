@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "온글잎 박다현";
+    src: url(../fontvv/온글잎\ 박다현체.ttf);
+    font-weight: 100;
+}
+@font-face {
+    font-family: "페이퍼 로지";
+    src: url(../fontvv/Paperlogy-1.000/Paperlogy-1Thin.ttf);
+    font-weight: 100;
+}
+@font-face {
+    font-family: "페이퍼 로지";
+    src: url(../fontvv/Paperlogy-1.000/Paperlogy-2ExtraLight.ttf);
+    font-weight: 200;
+}
+@font-face {
+    font-family: "페이퍼 로지";
+    src: url(./fontvv/Paperlogy-1.000/Paperlogy-3Light.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: "페이퍼 로지";
+    src: url(../fontvv/Paperlogy-1.000/Paperlogy-4Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "페이퍼 로지";
+    src: url(../fontvv/Paperlogy-1.000/Paperlogy-5Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: "페이퍼 로지";
+    src: url(../fontvv/Paperlogy-1.000/Paperlogy-6SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: "페이퍼 로지";
+    src: url(../fontvv/Paperlogy-1.000/Paperlogy-7Bold.ttf);
+    font-weight: 700;
+}@font-face {
+    font-family: "페이퍼 로지";
+    src: url(../fontvv/Paperlogy-1.000/Paperlogy-8ExtraBold.ttf);
+    font-weight: 800;
+}@font-face {
+    font-family: "페이퍼 로지";
+    src: url(../fontvv/Paperlogy-1.000/Paperlogy-9Black.ttf);
+    font-weight: 900;
+}
+@font-face {
+    font-family: 'Aggravo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}

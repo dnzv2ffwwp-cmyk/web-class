@@ -1,0 +1,47 @@
+{margin: 0px;padding: ;}
+.a{
+    border:1px solid #000;
+    height:1500px;
+    background-color: grey;
+    background-image: url(../c12.background/img/shadow.jpg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 100px)200px;
+    background-size: auto 50%;
+    /* background-position: center; */
+}
+.b{
+    border:1px solid #000;
+    height:1500px;
+    background: black url(../c12.background/img/shadow.jpg) no-repeat calc(100% - 100px)200px / auto 50%
+}
+.c{
+    border: 1px solid green;
+    height: 1500px;
+    background:purple url(./img/shadow.jpg) no-repeat 50% 50%/contain; 
+    background-blend-mode: multiply;
+}
+.d{
+    border: 1px solid red;
+    height: 1000px;
+    background: 
+    url(../c12.background/img/leo_visions-pH3a_0GRXYk-unsplash.jpg) no-repeat 0 0 / 400px auto,
+    url(../c12.background/img/planet-volumes-mp3yboUoVjA-unsplash.jpg) no-repeat 100% 0 / 400px auto,
+    url(../c12.background/img/tanya-barrow-tefnDTLr8cI-unsplash.jpg) no-repeat 50% 50% / 400px auto;
+}
+.e{
+    border: 1px solid red;
+    height: 1000px;
+    background: 
+    url(../c12.background/img/shadow.jpg) no-repeat 50% 50% / 800px auto,
+    linear-gradient(30deg,red 15%,blue 50%,pink 90%); 
+
+}
+.e .box{
+    width:400px;
+    height:800px;
+    background-color: rgba(255,255,255,0.5);
+    margin: 0 auto;
+    margin-top: 100px;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+}

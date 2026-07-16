@@ -1,0 +1,99 @@
+/* 기본 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.about{
+    width: 1920px;
+    height: 1577px;
+}
+
+.banner{
+    border: 2px solid #6f7fa3;
+    width: calc(100% - 48px);
+    height: 599px;
+    overflow: hidden;
+    position: relative;
+}
+.banenr img{
+    width:  100%;
+    height: 599px;
+    display: block;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: 16 / 5;
+}
+.banner p{
+    font-family: 'Aboreto';
+    color: white;
+    font-weight: 400;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, 50%); */
+}
+
+.inner{
+    border: 2px salmon;
+    width: 1600px;
+    height: 144px;
+}
+.inner h2{
+    font-family: 'Aboreto';
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+
+
+}
+
+.inner image{
+    width: 1600px;
+    height: 506px;
+    border: 2px solid gray;
+    object-fit: contain;
+    background: no-repeat left ;
+}

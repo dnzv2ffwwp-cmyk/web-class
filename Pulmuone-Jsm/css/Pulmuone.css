@@ -1,0 +1,88 @@
+*{margin:0; padding:0;box-sizing: border-box;}
+h1,h2,h3,h4,h5,h6{
+    font-weight: inherit;
+    /* inherit은 부모태그 값을 상속 받는다 */
+    font-size: inherit;
+}
+
+address{
+    font-style: inherit;
+}
+ul,ol{list-style: inherit;}
+a{color: inherit;text-decoration: inherit;}
+
+/* 공통 스타일-> 공통적으로 적용되는 스타일을 설정 */
+.title{
+    font-family: '풀무원';
+}
+main{
+    /* border: 1px solid red; */
+    width: 1200px;
+    margin: 0 auto;
+
+}
+main h3{
+    line-style: 
+}
+
+html{
+    font-size: 20px;
+    font-family:'Pretendard','Noto Sans',sans-serif;
+    }
+
+.banner{
+    /* border: 1px solid red; */
+    height: 250px;
+    background: url(../img/sub_vis01_02.jpg) no-repeat  center  / cover;
+}
+/* .b{
+    width: 1200px;
+    height: 50px;
+} */
+.c{
+    width: 1200px;
+    height: 100px;
+}
+.d{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.d h3{
+    font-size:30px;
+    line-height: 1.6;
+    background: url(../img/sub_tit_line.gif) repeat-x 0 100% ;
+    text-align: center;
+}
+.e{
+    padding: 40px 90px;
+    margin: 50px;
+}
+.e h2{
+    /* border: 1px solid red; */
+    text-align: center;
+    margin-bottom: 20px;
+    /* padding: 70px 139px; */
+    font-size: 52px;
+   
+}
+.green{
+    color: rgb(126, 174, 75);
+}
+
+.p1{
+    font-family: '풀무원';
+    padding: 40px 90px;
+    font-size: 35px;
+    text-align: center;
+}
+.p2{
+    text-align: center;
+    /* padding: 40px 90px; */
+    /* margin-bottom: 25px; */
+}
+.p3{
+    text-align: center;
+    /* padding: 40px 90px; */
+    margin-top: 30px;
+}
