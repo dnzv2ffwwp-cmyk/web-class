@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적표</title>
+    <link rel="stylesheet" href="ex1.css">
+</head>
+<body>
+    <script>
+        let userName = prompt('이름을 입력해 주세요.')
+        let scoreKo = Number(prompt('국어 점수를 입력해 주세요.'))
+        let scoreEn = Number(prompt('영어 점수를 입력해 주세요.'))
+        let scoreMA = Number(prompt('수학 점수를 입력해 주세요.'))
+        let scoreSo = Number(prompt('사회 점수를 입력해 주세요.'))
+        let scoreSum = scoreEn + scoreKo + scoreMA + scoreSo
+        let scoreAer = (scoreSum/4).toFixed(2)
+        let grade =
+            Number(scoreAer) >= 90 ? '1등급' :
+            Number(scoreAer) >= 70 ? '2등급' :
+            Number(scoreAer) >= 60 ? '3등급' :
+            Number(scoreAer) >= 50 ? '4등급' :
+            '5등급';
+
+
+        document.write(
+        `<main class="report-card">
+        <header class="report-header">
+            <h1>성적표</h1>
+            <p>과목별 성적을 한눈에 확인하세요.</p>
+        </header>
+
+        <div class="table-wrap">
+            <table>
+                <caption>${userName}님의 성적표</caption>
+                <tbody>
+                    <tr>
+                        <th scope="row">이름</th>
+                        <td>${userName}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">국어</th>
+                        <td>${scoreKo}점</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">영어</th>
+                        <td>${scoreEn}점</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">수학</th>
+                        <td>${scoreMA}점</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">사회</th>
+                        <td>${scoreSo}점</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row">합계</th>
+                        <td>${scoreSum}점</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">평균</th>
+                        <td>${scoreAer}점</td>
+                    </tr>
+                    <tr>
+                        <th>등급</th>
+                        <td>${grade}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>`)
+    </script>
+</body>
+</html>

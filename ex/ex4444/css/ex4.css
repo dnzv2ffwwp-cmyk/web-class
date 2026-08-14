@@ -1,0 +1,136 @@
+*{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{
+    font-weight: inherit;
+    font-size: inherit;
+}
+address{
+    font-style: inherit;
+}
+ul,ol{list-style: inherit;}
+a{color:inherit;text-decoration: inherit;}
+
+/* 리셋 끝 */
+main{
+    margin: 10px;
+    width: auto;
+    background-color: #fffaf5;
+    background: url(../img/bg.svg) center top / 100% auto no-repeat;
+    /* background-image: url(../img/bg.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto; */
+}
+html{
+    font-size: 20px;
+}
+.banner{
+    position: relative;
+}
+.banner img{
+    display: block;
+    height: 599px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    /* border: 3px solid salmon; */
+    /* position: relative; */
+}
+.banner-title{
+    font-family: Aboreto;
+    font-size: 2.5rem;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 3px solid silver; */
+}
+.container{
+    width:1600px;
+    margin: 0 auto;
+    margin-top: 120px;
+    /* border: 3px solid lightcoral; */
+
+}
+.container h2{
+    font-family: Aboreto;
+    font-size: 4rem;
+    font-weight: 400;
+    font-style: Regular;
+    line-height: 90%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+}
+.container p{
+    font-family: Pretendard;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 1rem;
+    leading-trim: NONE;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    margin: 48px 0;
+}
+
+.figure{
+    /* border: 3px solid lightseagreen; */
+    display: block;
+    object-fit: cover;
+    margin-bottom: 20px;
+} 
+.gallery-top{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px,1fr));
+  /* grid-template-rows: repeat(auto-fit, 1fr); */
+  gap: 20px;
+}
+.gallery-top img{
+    /* justify-content: center;
+    align-items: center; */
+    width: 520px;
+    height: 520px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1 ;
+    border-radius: 20px;
+}
+.gallery-bottom{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+.gallery-bottom img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 790 / 434;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.figure h3{
+    font-family: Aboreto;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 2rem;
+    leading-trim: NONE;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: lowercase;
+    margin-top: 40px;
+}
+
+.figure p{
+    font-family: Pretendard;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 1rem;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+}

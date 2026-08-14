@@ -1,0 +1,136 @@
+:root {
+    --primary: #4f46e5;
+    --primary-soft: #eef2ff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --surface: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    color: var(--text);
+    font-family: Pretendard, "Noto Sans KR", sans-serif;
+    background:
+        radial-gradient(circle at top left, #e0e7ff 0, transparent 35%),
+        #f8fafc;
+}
+
+.report-card {
+    width: min(100%, 520px);
+    overflow: hidden;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 20px;
+    background: var(--surface);
+    box-shadow: 0 20px 50px rgba(51, 65, 85, 0.12);
+}
+
+.report-header {
+    padding: 28px 32px 22px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+.report-header h1 {
+    margin: 0 0 6px;
+    font-size: clamp(24px, 5vw, 30px);
+    letter-spacing: -0.04em;
+}
+
+.report-header p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 14px;
+}
+
+.table-wrap {
+    padding: 18px 32px 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+caption {
+    padding: 4px 0 16px;
+    color: var(--muted);
+    font-size: 14px;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 16px 14px;
+    border-bottom: 1px solid var(--line);
+    font-size: 16px;
+}
+
+th {
+    width: 45%;
+    color: var(--muted);
+    font-weight: 600;
+    text-align: left;
+}
+
+td {
+    font-weight: 700;
+    text-align: right;
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+tbody tr:first-child th,
+tbody tr:first-child td {
+    color: var(--primary);
+}
+
+tfoot tr:first-child th,
+tfoot tr:first-child td {
+    border-top: 2px solid var(--primary);
+}
+
+tfoot tr:last-child {
+    background: var(--primary-soft);
+}
+
+tfoot tr:last-child th,
+tfoot tr:last-child td {
+    border-bottom: 0;
+    color: var(--primary);
+    font-size: 18px;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+    }
+
+    .report-header {
+        padding: 24px;
+    }
+
+    .table-wrap {
+        padding: 14px 20px 22px;
+    }
+
+    th,
+    td {
+        padding: 14px 10px;
+    }
+}

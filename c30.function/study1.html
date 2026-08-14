@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    <script>
+        // console.log()
+        // prompt()
+        // Number()
+        // alert() //이런 형태가 함수 괄호()가 있는게 함순데 ()를 실행해라~
+        function a(){
+            alert('hi')
+        } //정의부 정의하는 부분
+        // a() //호출부, 실행부
+        function b(name){
+            document.write(`<p>${name} 니마 하이</p>`)
+            
+        } // name 이 매개변수, 
+        b('미니') // 이게 인자
+
+        function c(person){
+            document.write(`<p>${person[0]} 하이</p>`)
+            document.write(`<p>${person[0]} 님은 ${person[1]} 세 이시군여</p>`)
+        }
+        c(['선민',19])
+
+        function d(person){
+            document.write(`<p>${person.name} 하이</p>`)
+            document.write(`<p>${person.name} 님은 ${person.age} 세 이시군여</p>`)
+        }
+        d({name:'선민',age:19});
+
+        // function e(){
+        //     return
+        //     alert ('헤헤')
+        // }
+        // e()
+        function getAver(score){
+            return (score[0]+score[1]+score[2])/3
+            
+        }
+        let result = getAver([10,20,30]);
+        document.write(result);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+</head>
+<body>
+    <h1>자바 객체 시스템</h1>
+    <h1>자바 객체 시스템</h1>   
+    <p>자바스크립트는 브라우저 자체를 객체로 이해하고, 최상위 객체를 window 객체라 부름</p>
+    <p>window 아래에는 하위 객체가 포함 되어잇다</p>
+    <ul>
+        <li>document</li>
+        <li>location</li>
+        <li>history</li>
+        <li>console</li>
+        <li>navigator</li>
+    </ul>
+    <script>
+
+        //     console.log(window.location)
+        //     location.href = 'https://www.naver.com'
+        //     location.reload()
+        // history.back()
+        // history.go(-1)
+        // history.forward(-1)
+        console.log(document)
+        let h1tag = document.querySelector("h1")
+        h1tag.style.color = 'pink'
+        h1tag.style.fontSize = '80px'
+        h1tag.style.marginLeft = '20px'
+        let ptags = document.querySelectorAll('p')
+        ptags[0].style.color = 'green'
+        ptags[1].style.color = 'green'
+        for(let i=0 ; i<2 ; i++){
+            ptags[i].style.color= 'orange'
+        }
+        ptags.forEach((tag)=>{
+            tag.style.color='lightblue'
+        })
+        let bs = document.querySelectorAll('.b')
+        bs.forEach((ptags,index)=>{
+            ptags.style.color = colors[index]
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object-객체 사물</title>
+</head>
+<body>
+    <SCRIPT>
+        let person = {name:"선미니",gender:"여",married:false}
+        console.log(person["name"])
+        console.log(person.gender)
+        //name -> key, "선미니"->value =>프로퍼티
+        let person2 = {name:'미니',gender:'여',married:true}
+        console.log(person2.name)
+
+        let newPerson = {...person,age:100}
+        console.log(newPerson)
+    </SCRIPT>
+</body>
+</html>

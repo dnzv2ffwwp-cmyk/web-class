@@ -32,7 +32,7 @@ main{
 }
 
 .container{
-    border: 3px solid orange;
+    /* border: 3px solid orange; */
     margin: auto;
     width: 1600px;
     height: 100%;
@@ -41,8 +41,8 @@ main{
     text-align: center;
 } */
 .con1{
-    border: 3px solid yellow;
-    padding-top: 10rem;
+    /* border: 3px solid yellow; */
+    padding-top: 9rem;
     background: url(../img/Vector\ 1.png) no-repeat 50% 0 ;
     text-align: center;
     margin-bottom: 5rem;
@@ -84,7 +84,7 @@ main{
 
 
 .container h2{
-    font-size: 7.5rem;
+    font-size: 4rem;
     line-height: 90%;    
     text-transform: uppercase;
     margin-bottom: 2rem;
@@ -116,3 +116,29 @@ main{
 .figure h3{
     text-align: left;
 } */
+
+@media (max-width:500px){
+    html{
+        font-size: 14px;
+    }
+    .container{
+        width: auto;
+        margin: 0 1rem;
+        object-fit: cover;
+    }
+    .con1 h2{
+        margin-top: 7rem;
+    }
+    p br{display: none;}
+
+    .cafe-figure{
+        display: flex;
+        flex-direction: column;
+        /* object-fit: cover; */
+        /* gap: 1rem; */
+    }
+    .cafe-figure img{
+        object-fit: cover;
+
+    }
+}

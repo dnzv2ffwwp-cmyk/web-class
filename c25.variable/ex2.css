@@ -1,0 +1,351 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 60px 24px;
+    overflow-x: hidden;
+    color: #172033;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    background:
+        radial-gradient(circle at 12% 18%, rgba(83, 116, 255, 0.24), transparent 28%),
+        radial-gradient(circle at 88% 82%, rgba(0, 211, 174, 0.2), transparent 30%),
+        linear-gradient(135deg, #eef3ff 0%, #f8fbff 48%, #ecfff8 100%);
+}
+
+body::before,
+body::after {
+    position: fixed;
+    z-index: -1;
+    width: 280px;
+    height: 280px;
+    border-radius: 36% 64% 62% 38%;
+    content: "";
+    filter: blur(2px);
+    animation: float 8s ease-in-out infinite;
+}
+
+body::before {
+    top: -100px;
+    right: -80px;
+    background: linear-gradient(135deg, #675cff, #27d8d0);
+}
+
+body::after {
+    bottom: -130px;
+    left: -80px;
+    background: linear-gradient(135deg, #ffcc5c, #ff6b81);
+    animation-delay: -4s;
+}
+
+main {
+    width: min(1040px, 100%);
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    padding: 44px 48px;
+    overflow: hidden;
+    color: white;
+    background: linear-gradient(120deg, #4556dc, #6c5ce7 48%, #00bfa6);
+    border-radius: 28px;
+    box-shadow: 0 22px 55px rgba(69, 86, 220, 0.28);
+    animation: slide-down 0.7s ease both;
+}
+
+header::after {
+    position: absolute;
+    top: -70px;
+    right: -30px;
+    width: 220px;
+    height: 220px;
+    background: rgba(255, 255, 255, 0.13);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+    content: "";
+}
+
+h1 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-size: clamp(30px, 5vw, 54px);
+    letter-spacing: -2px;
+}
+
+section {
+    padding: 26px 30px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 22px;
+    box-shadow: 0 14px 35px rgba(38, 53, 92, 0.1);
+    backdrop-filter: blur(14px);
+}
+
+header + section {
+    margin: 24px 0;
+    animation: rise 0.7s 0.12s ease both;
+}
+
+p {
+    margin: 0;
+    color: #5c6578;
+    line-height: 1.85;
+}
+
+.info {
+    width: min(440px, calc(50% - 12px));
+    margin-right: calc(50% + 12px);
+    margin-left: auto;
+    animation: rise 0.7s 0.24s ease both;
+}
+
+.info table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info tr:not(:last-child) {
+    border-bottom: 1px solid #e7eaf3;
+}
+
+.info th,
+.info td {
+    padding: 15px 8px;
+}
+
+.info th {
+    color: #737c90;
+    font-size: 14px;
+    text-align: left;
+}
+
+.info td {
+    color: #2b3bca;
+    font-size: 19px;
+    font-weight: 800;
+    text-align: right;
+}
+
+.bmi-chart {
+    margin-top: 24px;
+    padding: 32px;
+    animation: rise 0.7s 0.36s ease both;
+}
+
+.bmi-chart h2 {
+    margin: 0 0 8px;
+    font-size: 25px;
+}
+
+.bmi-status {
+    color: #657086;
+}
+
+.bmi-status strong {
+    margin-left: 5px;
+    color: #4c50d7;
+    font-size: 20px;
+}
+
+.bmi-scale {
+    position: relative;
+    display: grid;
+    grid-template-columns: 34fr 18fr 8fr 40fr;
+    margin-top: 56px;
+    overflow: visible;
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 12px 25px rgba(31, 42, 70, 0.2);
+}
+
+.bmi-scale::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 15%, rgba(255, 255, 255, 0.36) 45%, transparent 70%);
+    border-radius: inherit;
+    content: "";
+    transform: translateX(-100%);
+    /* animation: shine 3.2s ease-in-out infinite; */
+    pointer-events: none;
+}
+
+.bmi-range {
+    padding: 20px 4px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+    transition: filter 0.25s, transform 0.25s;
+}
+
+.bmi-range:hover {
+    z-index: 2;
+    filter: brightness(1.12);
+    transform: translateY(-5px);
+}
+
+.underweight {
+    background: linear-gradient(135deg, #3898ff, #3764e8);
+    border-radius: 16px 0 0 16px;
+}
+
+.normal {
+    background: linear-gradient(135deg, #26d68c, #0eaa73);
+}
+
+.overweight {
+    background: linear-gradient(135deg, #ffc44d, #f18b28);
+}
+
+.obese {
+    background: linear-gradient(135deg, #ff7068, #e63f61);
+    border-radius: 0 16px 16px 0;
+}
+
+.bmi-marker {
+    position: absolute;
+    top: -42px;
+    z-index: 4;
+    width: 3px;
+    height: calc(100% + 42px);
+    background: #20283a;
+    transform: translateX(-50%);
+    transition: left 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.bmi-marker::after {
+    position: absolute;
+    top: 36px;
+    left: 50%;
+    border-top: 9px solid #20283a;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    content: "";
+    transform: translateX(-50%);
+}
+
+.bmi-marker span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    padding: 6px 10px;
+    color: white;
+    font-size: 14px;
+    white-space: nowrap;
+    background: #20283a;
+    border-radius: 8px;
+    box-shadow: 0 6px 14px rgba(32, 40, 58, 0.25);
+    transform: translateX(-50%);
+    animation: pulse 1.8s ease-in-out infinite;
+}
+
+.bmi-numbers {
+    position: relative;
+    height: 20px;
+    margin-top: 10px;
+    color: #737c90;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.bmi-numbers span {
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.bmi-numbers span:nth-child(1) {
+    left: 0;
+    transform: none;
+}
+
+.bmi-numbers span:nth-child(2) {
+    left: 34%;
+}
+
+.bmi-numbers span:nth-child(3) {
+    left: 52%;
+}
+
+.bmi-numbers span:nth-child(4) {
+    left: 60%;
+}
+
+.bmi-numbers span:last-child {
+    right: 0;
+    transform: none;
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-25px) scale(0.98);
+    }
+}
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(24px) rotate(12deg);
+    }
+}
+
+@keyframes shine {
+    55%,
+    100% {
+        transform: translateX(110%);
+    }
+}
+
+@keyframes pulse {
+    50% {
+        transform: translateX(-50%) translateY(-3px);
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 24px 14px;
+    }
+
+    header {
+        padding: 34px 24px;
+        border-radius: 22px;
+    }
+
+    section {
+        padding: 22px 20px;
+    }
+
+    .info {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .bmi-chart {
+        padding: 26px 16px;
+    }
+
+    .bmi-range {
+        padding: 17px 1px;
+        font-size: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

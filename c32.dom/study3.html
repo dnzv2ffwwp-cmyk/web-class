@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <style>
+        .box{
+            border: 1px solid salmon;
+            padding:  20px;
+        }
+        .index{
+            border: 1px solid lightblue;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">greeting</button>
+    <button id="btn2">keep push</button>
+    <p class="box"> content </p>
+    <script>
+        const btn1 = document.querySelector('#btn1')
+        const btn2 = document.querySelector('#btn2')
+        btn1.addEventListener('click',function(){
+            const box = document.querySelector('.box')
+            box.innerHTML = '날 눌럿구나'
+        })
+        btn1.addEventListener('dbclick',function(){
+            const box = document.querySelector('.box')
+            box.innerHTML = '또 눌럿네?'
+        })
+        document.addEventListener('click',(event)=>{
+            console.log(event.target.textContent)
+            console.log(event.target.className)
+            console.log(event.target.tagName)
+
+        })
+    </script>
+</body>
+</html>

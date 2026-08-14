@@ -97,3 +97,22 @@ img {
     object-fit: contain;
     background: no-repeat left ;
 }
+@media (max-width:1440px){
+    html{
+        font-size: 18px;
+    }
+    .inner-frame {
+        width: auto;
+        margin: 0 2rem;
+    }
+    .title p br{display: none;}
+}
+@media (max-width:768px){
+    html{
+        font-size:14px;
+    }
+    .inner-frame {
+        width: auto;
+        margin: 0 1rem;
+    }
+}

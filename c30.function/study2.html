@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>값으로서 사용되는 함수</title>
+</head>
+<body>
+    <script>
+        // a()
+        // function a(){
+        //     alert('aaa')
+        // }
+        // let b = function(){
+        //     alert('bbb')
+        // }
+
+        let fan = {
+            body:'#000',
+            height:120,
+            width:30,
+            weight:'6kg',
+            powerOn:function(){
+                alert('선풍기 켜짐')
+                this.fanSpeed=1
+            },
+            powerOff:function(){
+                alert('꺼짐')
+                this.fanSpeed=0
+            },
+            fanSpeedUP:function(){
+                this.fanSpeed+=1
+            },
+            fanSpeedDown:function(){
+                this.fanSpeed-=1
+            },
+            showFanSpeed:function(){
+                alert('현재 풍속 ${this.fanSpeed}단계')
+            }
+        }
+        fan.body
+        fan.weight
+        fan.powerOn()
+        fan.powerOff()
+        alert('현재 스피드'+'fan.fanSpeed')
+        fan.powerOn()
+        alert(fan.fanSpeed)
+        fan.fanSpeedUP()
+        alert(fan.fanSpeed)
+        
+    </script>
+</body>
+</html>

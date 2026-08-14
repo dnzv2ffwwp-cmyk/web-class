@@ -1,0 +1,12 @@
+    html{font-size:20px ;}
+    h1{font-size: 3rem;}
+    h2{font-size: 1.4rem;}
+    p{font-size: 0.8rem;}
+    .fontControl{display: flex; gap: 0.5rem; background-color: antiquewhite; border: 1px solid lightblue; right: 0; top: 0;}
+    .fontControl span{
+        padding: .4rem 1.3rem;
+        border-radius: 100px;
+        box-sizing: 0 0 10px #ddd;
+        font-size: .7rem;
+    }
+    
