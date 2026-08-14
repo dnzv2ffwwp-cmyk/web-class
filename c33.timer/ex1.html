@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>달토끼 루미의 별 모으기</title>
+  <title>별빛 캐치</title>
   <link rel="stylesheet" href="./css/ex1.css">
   <style>
     * { box-sizing: border-box; }
@@ -27,7 +27,7 @@
     .moon { position:absolute; right:8%; top:9%; width:88px; aspect-ratio:1; border-radius:50%; background:#fff0ae; box-shadow:0 0 40px #ffe9a866; }
     .moon::after { content:""; position:absolute; width:90%; aspect-ratio:1; left:-25%; top:-12%; border-radius:50%; background:#15112e; }
     #star { display:none; position:absolute; z-index:3; width:48px; height:48px; color:var(--yellow); font-size:42px; line-height:1;
-      filter:drop-shadow(0 0 13px #ffe36ecc); animation:shine .6s ease-in-out infinite alternate; }
+      pointer-events:auto; cursor:pointer; filter:drop-shadow(0 0 13px #ffe36ecc); animation:shine .6s ease-in-out infinite alternate; }
     #rabbit { position:absolute; z-index:4; left:45%; top:70%; width:58px; height:72px; transition:left .07s linear,top .07s linear; filter:drop-shadow(0 8px 7px #0007); }
     .ear { position:absolute; top:0; width:18px; height:38px; border:4px solid #fff; border-radius:50%; background:var(--pink); }
     .ear.left { left:9px; transform:rotate(-8deg); } .ear.right { right:9px; transform:rotate(8deg); }
@@ -54,7 +54,7 @@
 <body>
   <main>
     <header>
-      <div><p class="tag">MOONLIGHT MINI GAME</p><h1>달토끼의 <span>별빛 산책</span></h1><p class="desc">루미를 움직여 밤하늘의 별을 모아보세요.</p></div>
+      <div><p class="tag">MOONLIGHT MINI GAME</p><h1>별빛 <span>캐치</span></h1><p class="desc">반짝 나타나는 별을 놓치지 말고 클릭하세요.</p></div>
       <div class="stats" aria-live="polite">
         <div class="stat"><small>모은 별</small><strong id="score">0</strong></div>
         <div class="stat"><small>최고 기록</small><strong id="best">0</strong></div>
@@ -62,22 +62,17 @@
       </div>
     </header>
     <section id="game" aria-label="별 모으기 게임 영역">
-      <div class="moon"></div><div id="star">★</div>
-      <div id="rabbit"><i class="ear left"></i><i class="ear right"></i><div class="face"><i class="eye left"></i><i class="eye right"></i><i class="nose"></i></div></div>
+      <div class="moon"></div><button id="star" type="button" aria-label="별 잡기">★</button>
       <div id="overlay" class="overlay">
         <div class="popup" role="dialog" aria-modal="true" aria-labelledby="title">
           <div class="avatar"><i class="ear left"></i><i class="ear right"></i><div class="face"><i class="eye left"></i><i class="eye right"></i><i class="nose"></i></div></div>
-          <h2 id="title">안녕, 나는 루미야!</h2>
-          <p id="message">방향키나 아래 버튼으로 나를 움직여줘. 30초 동안 별에 닿을 때마다 점수가 올라가!</p>
-          <button id="start" type="button">산책 시작하기</button>
+          <h2 id="title">별빛 캐치에 도전!</h2>
+          <p id="message">30초 동안 여기저기 나타나는 별을 최대한 빠르게 클릭해 주세요!</p>
+          <button id="start" type="button">게임 시작하기</button>
         </div>
       </div>
     </section>
-    <div class="buttons">
-      <button data-key="ArrowLeft" aria-label="왼쪽">←</button><button data-key="ArrowUp" aria-label="위">↑</button>
-      <button data-key="ArrowDown" aria-label="아래">↓</button><button data-key="ArrowRight" aria-label="오른쪽">→</button>
-    </div>
-    <p class="guide">키보드 방향키 · 화면 버튼으로 이동</p>
+    <p class="guide">마우스 클릭 · 화면 터치로 별 잡기</p>
   </main>
 
   <aside id="promoPopup" class="promo-layer" aria-label="루미의 별빛 축제 홍보" role="dialog" aria-modal="true">
@@ -98,39 +93,33 @@
   </aside>
 
   <script>
-    const game=document.querySelector('#game'),rabbit=document.querySelector('#rabbit'),star=document.querySelector('#star');
+    const game=document.querySelector('#game'),star=document.querySelector('#star');
     const overlay=document.querySelector('#overlay'),start=document.querySelector('#start'),scoreEl=document.querySelector('#score');
     const bestEl=document.querySelector('#best'),timeEl=document.querySelector('#time'),title=document.querySelector('#title'),message=document.querySelector('#message');
-    let x=45,y=70,score=0,time=30,timer,playing=false,best=Number(localStorage.getItem('lumiBest'))||0;
+    let score=0,time=30,timer,playing=false,best=Number(localStorage.getItem('starCatchBest'))||0;
     bestEl.textContent=best;
     function newStar(){
       const maxX=game.clientWidth-star.offsetWidth-20,maxY=game.clientHeight-star.offsetHeight-20;
       star.style.left=10+Math.random()*maxX+'px'; star.style.top=10+Math.random()*maxY+'px';
     }
-    function move(key){
+    function catchStar(event){
       if(!playing)return;
-      if(key==='ArrowLeft')x-=4;if(key==='ArrowRight')x+=4;if(key==='ArrowUp')y-=4;if(key==='ArrowDown')y+=4;
-      x=Math.max(0,Math.min(94,x));y=Math.max(0,Math.min(84,y));rabbit.style.left=x+'%';rabbit.style.top=y+'%';check();
-    }
-    function check(){
-      const a=rabbit.getBoundingClientRect(),b=star.getBoundingClientRect();
-      if(a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top){
-        score++;scoreEl.textContent=score;const p=document.createElement('b');p.className='plus';p.textContent='+1';p.style.left=star.style.left;p.style.top=star.style.top;
-        game.append(p);p.addEventListener('animationend',()=>p.remove());newStar();
-      }
+      score++;scoreEl.textContent=score;
+      const p=document.createElement('b');p.className='plus';p.textContent='+1';
+      p.style.left=star.style.left;p.style.top=star.style.top;
+      game.append(p);p.addEventListener('animationend',()=>p.remove());newStar();
     }
     function begin(){
-      score=0;time=30;x=45;y=70;playing=true;scoreEl.textContent=0;timeEl.textContent=30;rabbit.style.left=x+'%';rabbit.style.top=y+'%';
+      score=0;time=30;playing=true;scoreEl.textContent=0;timeEl.textContent=30;
       star.style.display='block';overlay.classList.add('hide');newStar();clearInterval(timer);
       timer=setInterval(()=>{time--;timeEl.textContent=time;if(time<=0)finish();},1000);
     }
     function finish(){
       playing=false;clearInterval(timer);star.style.display='none';
-      if(score>best){best=score;localStorage.setItem('lumiBest',best);bestEl.textContent=best;title.textContent='최고 기록 달성!';}else title.textContent='별빛 산책 완료!';
-      message.textContent=`루미가 별 ${score}개를 모았어. 다시 산책해 볼까?`;start.textContent='다시 시작하기';overlay.classList.remove('hide');
+      if(score>best){best=score;localStorage.setItem('starCatchBest',best);bestEl.textContent=best;title.textContent='최고 기록 달성!';}else title.textContent='별빛 캐치 완료!';
+      message.textContent=`총 ${score}개의 별을 잡았어요. 한 번 더 도전해 볼까요?`;start.textContent='다시 도전하기';overlay.classList.remove('hide');
     }
-    document.addEventListener('keydown',e=>{if(e.key.startsWith('Arrow')){e.preventDefault();move(e.key);}});
-    document.querySelectorAll('[data-key]').forEach(btn=>btn.addEventListener('pointerdown',e=>{e.preventDefault();move(btn.dataset.key);}));
+    star.addEventListener('pointerdown',catchStar);
     start.addEventListener('click',begin);window.addEventListener('resize',()=>playing&&newStar());
 
     const promoPopup=document.querySelector('#promoPopup'),promoClose=document.querySelector('#promoClose');

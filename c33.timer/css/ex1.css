@@ -20,6 +20,18 @@
     justify-content: space-between;
 }
 
+/* 별빛 캐치 버튼 */
+#star {
+    border: 0;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+#star:active {
+    transform: scale(.82);
+}
+
 /* 게임 팝업과 별개로 동작하는 홍보 팝업 */
 .promo-layer {
     position: fixed;
